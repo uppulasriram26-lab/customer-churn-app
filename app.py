@@ -7,6 +7,11 @@ st.set_page_config(page_title="Customer Churn Predictor", page_icon="📊")
 
 st.title("📊 Customer Churn Prediction App")
 st.markdown("### Developed by: Srira")
+st.markdown("""
+### 🚀 Project Overview
+This application predicts customer churn using Machine Learning (Random Forest).
+It helps telecom companies identify customers likely to leave.
+""")
 
 # Load model
 try:
@@ -40,12 +45,15 @@ if st.button("Calculate Churn Risk"):
 
     st.divider()
 
-    st.metric("Churn Probability", f"{probability*100:.1f}%")
-    st.progress(int(probability * 100))
+st.subheader("📊 Prediction Result")
 
-    if probability > 0.7:
-        st.error("🚨 High Risk Customer")
-    elif probability > 0.4:
-        st.warning("⚠️ Medium Risk Customer")
-    else:
-        st.success("✅ Low Risk Customer")
+st.metric("Churn Probability", f"{probability*100:.1f}%")
+
+st.progress(int(probability * 100))
+
+if probability > 0.7:
+    st.error("🚨 High Risk Customer")
+elif probability > 0.4:
+    st.warning("⚠️ Medium Risk Customer")
+else:
+    st.success("✅ Low Risk Customer")
