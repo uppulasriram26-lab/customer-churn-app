@@ -6,7 +6,7 @@ This project predicts whether a telecom customer will churn (leave the service) 
 ---
 
 ## 👨‍💻 Developed By
-**Srira**
+**Sriram**
 
 ---
 
