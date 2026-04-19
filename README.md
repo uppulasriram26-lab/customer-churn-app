@@ -1,14 +1,42 @@
 # 📊 Customer Churn Prediction App
-**Developed by Srira**
 
-This project uses Machine Learning (Random Forest) to predict the likelihood of customers leaving a telecom service. 
+## 🚀 Overview
+This project predicts whether a telecom customer will churn (leave the service) using Machine Learning and provides real-time predictions through a Streamlit web app.
 
-## 🚀 Features
-- **Real-time Prediction:** Adjust sliders to see churn risk instantly.
-- **Machine Learning:** Trained on the Telco-Customer-Churn dataset.
-- **Web UI:** Built with Streamlit for a professional user experience.
+---
 
-## 🛠️ Setup
-1. Clone this repo.
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the app: `streamlit run app.py`
+## 👨‍💻 Developed By
+**Srira**
+
+---
+
+## 🧠 Tech Stack
+- Python
+- Pandas, NumPy
+- Scikit-learn (Random Forest)
+- Streamlit (Web App)
+- Joblib (Model Saving)
+
+---
+
+## 📊 Features
+- Real-time churn prediction
+- Interactive sliders for customer input
+- Probability-based risk scoring
+- Clean UI dashboard
+- Machine Learning model trained on 7,000+ records
+
+---
+
+## 🧪 Model
+- Algorithm: Random Forest Classifier
+- Features: 45 engineered features
+- Accuracy: High performance after preprocessing
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
