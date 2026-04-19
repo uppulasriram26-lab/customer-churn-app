@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+st.write("App is running ✔")
 
 st.set_page_config(page_title="Customer Churn Predictor", page_icon="📊")
 
@@ -8,8 +9,13 @@ st.title("📊 Customer Churn Prediction App")
 st.markdown("### Developed by: Srira")
 
 # Load model
-model = joblib.load("churn_model.pkl")
-features = joblib.load("features.pkl")
+try:
+    model = joblib.load("churn_model.pkl")
+    features = joblib.load("features.pkl")
+    st.write("Model loaded ✔")
+except Exception as e:
+    st.error(f"Model error: {e}")
+    st.stop()
 
 # Sidebar inputs
 st.sidebar.header("Customer Profile")
