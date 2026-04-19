@@ -45,15 +45,15 @@ if st.button("Calculate Churn Risk"):
 
     st.divider()
 
-st.subheader("📊 Prediction Result")
+    st.subheader("📊 Prediction Result")
 
-st.metric("Churn Probability", f"{probability*100:.1f}%")
+    st.metric("Churn Probability", f"{probability*100:.1f}%")
 
-st.progress(int(probability * 100))
+    st.progress(int(probability * 100))
 
-if probability > 0.7:
-    st.error("🚨 High Risk Customer")
-elif probability > 0.4:
-    st.warning("⚠️ Medium Risk Customer")
-else:
-    st.success("✅ Low Risk Customer")
+    if probability > 0.7:
+        st.error("🚨 High Risk Customer")
+    elif probability > 0.4:
+        st.warning("⚠️ Medium Risk Customer")
+    else:
+        st.success("✅ Low Risk Customer")
